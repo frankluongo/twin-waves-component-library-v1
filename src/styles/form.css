@@ -1,0 +1,64 @@
+.form {
+  padding: clamp(1rem, 30vw, 2rem);
+
+  border: 1px solid var(--color-blue--25);
+  border-radius: 0.5rem;
+}
+
+.form__label {
+  display: block;
+  margin-bottom: 0.5rem;
+
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+.form__input {
+  display: block;
+  margin-bottom: 1rem;
+  min-height: 2.5rem;
+  padding: 0.25rem 0.5rem;
+  width: 100%;
+
+  font-size: 0.75rem;
+
+  border: 1px solid var(--color-blue--25);
+  border-radius: 0.25rem;
+}
+
+.form__input:focus {
+  background: var(--color-blue--05);
+}
+
+.form__submit {
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+
+  color: var(--color-white);
+  font-weight: bold;
+  text-transform: uppercase;
+
+  background: var(--color-blue);
+  border: 1px solid var(--color-blue);
+  border-radius: 0.25rem;
+
+  transition:
+    color 150ms ease-in-out,
+    background 150ms ease-in-out;
+}
+
+.form__submit:active,
+.form__submit:target {
+  background: var(--color-blue--75);
+}
+
+.form__submit:hover,
+.form__submit:focus {
+  color: var(--color-blue);
+
+  background: var(--color-white);
+}
+
+.form__text {
+  font-size: 0.875rem;
+}

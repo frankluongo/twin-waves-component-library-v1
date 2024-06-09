@@ -1,0 +1,9 @@
+/* RESET: */
+@import "./reset.css";
+/* GLOBALS */
+@import "./global.css";
+/* COMPONENTS: */
+@import "./form.css";
+@import "./header.css";
+@import "./hero.css";
+@import "./speaker.css";

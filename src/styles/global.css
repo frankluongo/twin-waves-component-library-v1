@@ -1,0 +1,334 @@
+/* CSS RESET: */
+@import "./reset.css";
+/* FONT IMPORTS: */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+@font-face {
+  font-display: swap;
+  font-family: Canela;
+  font-style: normal;
+  font-weight: 300;
+  src: url("/src/assets/Canela-Light.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: Canela;
+  font-style: italic;
+  font-weight: 300;
+  src: url("/src/assets/Canela-LightItalic.woff2") format("woff2");
+}
+
+/* GLOBAL */
+
+:root {
+  --content-width: 90rem;
+  /* COLORS */
+  --color-black: #1d252c;
+  --color-blue: #033662;
+  --color-blue--75: rgba(3, 54, 98, 0.75);
+  --color-blue--25: rgba(3, 54, 98, 0.25);
+  --color-blue--05: rgba(3, 54, 98, 0.05);
+  --color-sand: #fcf9f5;
+  --color-gray: #707070;
+  --color-dark-gray: #5b6770;
+  --color-white: #fff;
+  /* FONTS */
+  --font-primary: "Manrope", sans-serif;
+  --font-secondary: "Canela", serif;
+  /* MISC */
+  --shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  color: var(--color-blue);
+
+  font-family: var(--font-primary);
+}
+
+figure {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+p {
+  font-family: "Manrope", sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+}
+
+address {
+  font-style: normal;
+  font-weight: bold;
+}
+
+menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+/* COMPONENTS */
+
+.border\:image {
+  position: relative;
+}
+
+.border\:image img {
+  display: block;
+  width: 100%;
+}
+
+.border\:image::before {
+  bottom: -1rem;
+  left: -1rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+
+  border: 1px solid var(--color-black);
+  content: "";
+}
+
+.icon-link {
+  --transition: 250ms ease-in-out;
+  --size: 3rem;
+
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: var(--size);
+  width: var(--size);
+
+  color: var(--color-sand);
+
+  background: var(--color-blue);
+  border-radius: 50%;
+  cursor: pointer;
+
+  transition: background var(--transition) box-shadow var(--transition);
+}
+
+.icon-link:hover,
+.icon-link:focus {
+  background: var(--color-sand);
+  box-shadow: var(--shadow);
+}
+
+.icon-link svg {
+  height: 1rem;
+  width: auto;
+
+  fill: var(--color-sand);
+
+  pointer-events: none;
+  transition: fill var(--transition);
+}
+
+.icon-link:hover svg,
+.icon-link:focus svg {
+  fill: var(--color-blue);
+}
+
+/* LAYOUT */
+
+.align-items\:start {
+  align-items: flex-start;
+}
+
+.align-items\:end {
+  align-items: flex-end;
+}
+
+.container {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding-inline: 1rem;
+}
+
+.gap\:1 {
+  gap: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+}
+
+.flex-grid {
+  display: flex;
+  gap: clamp(1rem, 5vw, 3rem);
+  flex-wrap: wrap;
+}
+
+.flex-grid\:column {
+  flex: 1 1 var(--item-width, 0);
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-columns {
+  --gap: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap, 1rem);
+}
+
+.flex-direction\:column {
+  flex-direction: column;
+}
+
+.flex\:wrap {
+  flex-wrap: wrap;
+}
+
+.justify-content\:center {
+  justify-content: center;
+}
+
+.grid-column\:span-12 {
+  grid-column: span 12;
+}
+
+.padded-section {
+  padding-block: clamp(1rem, 5vw, 4rem);
+}
+
+/* TYPOGRAPHY */
+/* =============================================================== */
+
+/* PRE-DEFINED ELEMENTS */
+
+.text\:label {
+  font-family: var(--font-primary);
+  font-size: 0.875rem;
+  font-weight: bold;
+
+  text-transform: uppercase;
+}
+
+.font-family\:heading {
+  font-family: "Canela", serif;
+  font-weight: 300;
+}
+
+.font-family\:text {
+  font-family: "Manrope", sans-serif;
+}
+
+/* FONT SIZES */
+/* =============================================================== */
+
+.font-size\:label {
+  font-size: 1.25rem;
+}
+
+.font-size\:large {
+  font-size: clamp(1.15rem, 4vw, 1.5rem);
+}
+
+.font-size\:text-large {
+  font-size: clamp(1.1rem, 3vw, 1.25rem);
+}
+
+.font-size\:page-heading {
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+}
+
+.font-size\:section-heading {
+  font-size: clamp(1.5rem, 5vw, 2rem);
+}
+
+.font-size\:section-subheading {
+  font-size: clamp(1.25rem, 4vw, 1.75rem);
+}
+
+.font-size\small {
+  font-size: 0.875rem;
+}
+
+/* FONT STYLES */
+/* =============================================================== */
+
+.font-style\:italic {
+  font-style: italic;
+}
+
+.font-weight\:bold {
+  font-weight: bold;
+}
+
+.text-align\:center {
+  text-align: center;
+}
+
+.text\:uppercase {
+  text-transform: uppercase;
+}
+
+/* HELPERS */
+
+.background\:blue {
+  background: var(--color-blue);
+}
+
+.background\:dark-gray {
+  background: var(--color-dark-gray);
+}
+
+.background\:sand {
+  background: var(--color-sand);
+}
+
+.horizontal\:center {
+  margin-inline: auto;
+}
+
+.restrict-width {
+  max-width: 55rem;
+}
+
+.text-color\:white {
+  color: var(--color-white);
+}
+
+.text-color\:gray {
+  color: var(--color-gray);
+}
+
+.text-color\:black {
+  color: var(--color-black);
+}
+
+.text-color\:blue {
+  color: var(--color-blue);
+}

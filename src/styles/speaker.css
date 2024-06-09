@@ -1,0 +1,112 @@
+/* COMPONENT: */
+
+.speaker-card {
+  --max-width: 30rem;
+
+  position: relative;
+
+  width: 100%;
+  max-width: var(--max-width);
+
+  color: var(--color-sand);
+
+  border-radius: 0.5rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  overflow: hidden;
+}
+
+.speaker-card--full {
+  --max-width: 100%;
+}
+
+/* COMPONENT INSIDE CONTAINER: */
+
+.speakers-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.speakers-grid .speaker-card {
+  --max-width: 18rem;
+
+  flex: 1 1 var(--max-width);
+  max-width: 100%;
+}
+
+/* FOOTER */
+
+.speaker-card__footer {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: 2;
+
+  height: var(--footer-height, auto);
+  padding: 1rem;
+  width: 100%;
+
+  background: var(--color-blue--75);
+
+  transition: height 250ms ease-in-out;
+}
+
+.speaker-card:hover .speaker-card__footer,
+.speaker-card:focus .speaker-card__footer {
+  height: 100%;
+}
+
+.speaker-card-footer__divider {
+  margin: 0.5rem 0;
+
+  height: 1px;
+
+  background: var(--color-sand);
+  border: none;
+}
+
+.speaker-card-footer__reveal {
+  left: 1rem;
+  position: absolute;
+  right: 1rem;
+
+  opacity: 0;
+  transition: opacity 250ms ease-in-out;
+}
+
+.speaker-card:hover .speaker-card-footer__reveal,
+.speaker-card:focus .speaker-card-footer__reveal {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+/* IMAGE */
+
+.speaker-card__image-wrapper {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.speaker-card__image {
+  display: block;
+  height: 100%;
+  width: 100%;
+
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+}
+
+@media not (hover: hover) {
+  .speaker-card__footer {
+    height: auto;
+  }
+
+  .speaker-card-footer__reveal {
+    position: static;
+
+    opacity: 1;
+  }
+}

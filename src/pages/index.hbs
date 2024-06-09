@@ -1,0 +1,107 @@
+{{#> "layouts/main.hbs"}}
+
+{{> "components/v1/header.hbs" }}
+{{> "components/v1/hero.hbs" }}
+<div class="wrapper background:sand">
+  <div class="container padded-section">
+    <article class="flex-columns text-align:center restrict-width horizontal:center">
+      <p class="font-size:large font-family:heading font-style:italic">
+        Join us for dinner and a discussion with Glenmede's Director of the Center for Family Philanthropy and Wealth
+        Education Ken Spruill and other Glenmede leaders.
+      </p>
+      <p>
+        You will learn about the challenges facing families of wealth as they consider onboarding and engaging next
+        generation family members and how to work with your advisors to address them to fuel family success.
+      </p>
+    </article>
+  </div>
+</div>
+<div class="container flex-grid padded-section">
+  <div class="flex-grid:column flex-columns" style="--item-width: 25rem;">
+    <article class="flex-columns color:blue" style="--gap: 0.5rem;">
+      <h3 class="text:label">Schedule</h3>
+      <h4 class="font-family:heading font-size:section-subheading">Tuesday, May 7th 2024</h4>
+      <div>
+        <p class="font-weight:bold">5 PM - 5:30 PM:</p>
+        <p>Registration & Cocktail Reception</p>
+      </div>
+      <div>
+        <p class="font-weight:bold">5:30 PM - 7:30 PM:</p>
+        <p>Reception & Dinner</p>
+      </div>
+    </article>
+    {{> "components/v1/form.hbs" }}
+  </div>
+  <div class="flex-grid:column flex-columns justify-content:center align-items:end" style="--item-width: 18rem;">
+    {{!-- {{> "components/v1/speaker.hbs" image='/src/assets/Ken Spruill_crop.webp' variant='speaker-card--full' }} --}}
+    {{> "components/v1/speakers.hbs" }}
+  </div>
+</div>
+
+<div class="wrapper padded-section background:dark-gray text-color:white">
+  <section class="container flex-columns">
+    <h2 class="font-size:section-heading font-family:heading font-weight:bold text-align:center">
+      Questions About The Event?
+    </h2>
+    <div class="text-align:center">
+      <p class="font-size:large">Contact Dineen Williams for more information </p>
+      <p>
+        Email:
+        <a href="mailto:dineen.williams@glenmede.com">dineen.williams@glenmede.com</a>
+      </p>
+      <p>
+        Phone: <a href="#">445.226.4904</a>
+      </p>
+    </div>
+  </section>
+</div>
+
+<div class="wrapper padded-section text-color:blue">
+  <section class="container flex-columns">
+    <h2 class="font-size:section-heading font-family:heading font-weight:bold">About Glenmede</h2>
+    <p class="font-weight:bold font-size:text-large">Glenmede is among the nation's leading investment and wealth
+      management firms. Together with its affiliates, the company oversees $44.2 billion of assets under management (as
+      of 12/31/23) for high-net-worth individuals, families, family offices, endowments, foundations and institutional
+      clients. Headquartered in Philadelphia, the firm has offices in Ohio, Delaware, Florida, New Jersey, New York,
+      Pittsburgh and Washington DC. For further information, please visit www.glenmede.com.</p>
+    <p>
+      This material provides information of possible interest to Glenmede's clients and friends, and does not provide
+      investment, tax, legal or other advice. Any opinions, recommendations, expectations and/or projections expressed
+      herein may change after the date of publication. Information obtained from third-party sources is assumed to be
+      reliable but may not be independently verified, and the accuracy thereof is not guaranteed. Any potential outcome
+      discussed, including but not limited to performance, legislation or tax consequence, ultimately may not occur due
+      to various risks and uncertainties. Clients are encouraged to discuss any matter discussed herein with their tax
+      advisor, attorney or Glenmede Relationship Manager.
+    </p>
+    <footer>
+      <a class="icon-link" href="#" title="Check us out on LinkedIn">
+        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M14.8571 0H1.13929C0.510714 0 0 0.517857 0 1.15357V14.8464C0 15.4821 0.510714 16 1.13929 16H14.8571C15.4857 16 16 15.4821 16 14.8464V1.15357C16 0.517857 15.4857 0 14.8571 0ZM4.83571 13.7143H2.46429V6.07857H4.83929V13.7143H4.83571ZM3.65 5.03571C2.88929 5.03571 2.275 4.41786 2.275 3.66071C2.275 2.90357 2.88929 2.28571 3.65 2.28571C4.40714 2.28571 5.025 2.90357 5.025 3.66071C5.025 4.42143 4.41071 5.03571 3.65 5.03571ZM13.725 13.7143H11.3536V10C11.3536 9.11429 11.3357 7.975 10.1214 7.975C8.88571 7.975 8.69643 8.93929 8.69643 9.93571V13.7143H6.325V6.07857H8.6V7.12143H8.63214C8.95 6.52143 9.725 5.88929 10.8786 5.88929C13.2786 5.88929 13.725 7.47143 13.725 9.52857V13.7143Z" />
+        </svg>
+      </a>
+    </footer>
+  </section>
+</div>
+<footer class="wrapper padded-section background:blue text-color:white text-align:center">
+  <div class="container flex-columns font-size:small">
+    <address>
+      20 Montchanin Road, Suite 2000<br />
+      Greenville, DE 19807
+    </address>
+    <menu class="justify-content:center">
+      <li>
+        <a href="#">Disclosures</a>
+      </li>
+      <li>
+        <a href="#">Privacy Policy</a>
+      </li>
+      <li>
+        <a href="#">Terms of Use</a>
+      </li>
+    </menu>
+    <small>&copy; 2024 Glenmede. All Right Reserved</small>
+  </div>
+</footer>
+
+{{/"layouts/main.hbs"}}
